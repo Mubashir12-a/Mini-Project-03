@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+    background-color: #202020;
+    height: 100vh;
+    width: 100%;
+}
+
+.box-1 {
+    background-color: #313131;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    box-shadow: 5px 5px 15px 1px black;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.box-1 span:nth-child(1) {
+    display: block;
+    height: 5px;
+    width: 120%;
+    background: linear-gradient(to right,transparent 40%, cyan);
+    position: absolute;
+    border-radius: 50px;
+    top: 0px;
+    transform: translateX(-100%);
+}
+
+.box-1 span:nth-child(2) {
+    display: block;
+    height: 120%;
+    width: 5px;
+    background: linear-gradient(to bottom,transparent 40%, cyan);
+    position: absolute;
+    border-radius: 50px;
+    right: 0px;
+    transform: translateY(-102%);
+}
+
+.box-1 span:nth-child(3) {
+    display: block;
+    height: 5px;
+    width: 120%;
+    background: linear-gradient(to left,transparent 40%, cyan);
+    position: absolute;
+    border-radius: 50px;
+    bottom: 0px;
+    transform: translateX(85%);
+}
+
+.box-1 span:nth-child(4) {
+    display: block;
+    height: 120%;
+    width: 5px;
+    background: linear-gradient(to top,transparent 40%, cyan);
+    position: absolute;
+    border-radius: 50px;
+    left: 0px;
+    transform: translateY(85%);
+}
+
+@keyframes animate {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate2 {
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes animate3 {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate4 {
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+.box-1:hover span:nth-child(1) {
+    animation: animate 1s linear;
+    animation-delay: 0s;
+}
+.box-1:hover span:nth-child(2) {
+    animation: animate2 1s linear;
+    animation-delay: 400ms;
+}
+.box-1:hover span:nth-child(3) {
+    animation: animate3 1s linear;
+    animation-delay: 775ms;
+}
+.box-1:hover span:nth-child(4) {
+    animation: animate4 1s linear;
+    animation-delay: 1200ms;
+}
+
+.box-1:hover {
+    box-shadow: 0px 0px 30px 2px cyan;
+    border: 2px solid cyan;
+    transition: 0.5s;
+    transition-delay: 1550ms;
+}
+
+
+
+
+
+
+
+.box-2,
+.box-3 {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    background-color: #313131;
+    box-shadow: 5px 5px 15px 1px black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.box-2 span:nth-child(1),
+.box-3 span:nth-child(1) {
+    display: block;
+    height: 5px;
+    width: 120%;
+    background: linear-gradient(to right,transparent 40%, red);
+    position: absolute;
+    border-radius: 50px;
+    top: 0px;
+    transform: translateX(-100%);
+}
+
+.box-2 span:nth-child(2),
+.box-3 span:nth-child(2) {
+    display: block;
+    height: 120%;
+    width: 5px;
+    background: linear-gradient(to bottom,transparent 40%, red);
+    position: absolute;
+    border-radius: 50px;
+    right: 0px;
+    transform: translateY(-102%);
+}
+
+.box-2 span:nth-child(3),
+.box-3 span:nth-child(3) {
+    display: block;
+    height: 5px;
+    width: 120%;
+    background: linear-gradient(to left,transparent 40%, red);
+    position: absolute;
+    border-radius: 50px;
+    bottom: 0px;
+    transform: translateX(85%);
+}
+
+.box-2 span:nth-child(4),
+.box-3 span:nth-child(4) {
+    display: block;
+    height: 120%;
+    width: 5px;
+    background: linear-gradient(to top,transparent 40%, red);
+    position: absolute;
+    border-radius: 50px;
+    left: 0px;
+    transform: translateY(85%);
+}
+
+
+.box-2:hover span:nth-child(1),
+.box-3:hover span:nth-child(1) {
+    animation: animate 1s linear;
+    animation-delay: 0s;
+}
+.box-2:hover span:nth-child(2),
+.box-3:hover span:nth-child(2) {
+    animation: animate2 1s linear;
+    animation-delay: 400ms;
+}
+.box-2:hover span:nth-child(3),
+.box-3:hover span:nth-child(3) {
+    animation: animate3 1s linear;
+    animation-delay: 775ms;
+}
+.box-2:hover span:nth-child(4),
+.box-3:hover span:nth-child(4) {
+    animation: animate4 1s linear;
+    animation-delay: 1200ms;
+}
+
+
+.box-2:hover,
+.box-3:hover {
+    box-shadow: 0px 0px 30px 2px red;
+    border: 2px solid red;
+    transition: 0.5s;
+    transition-delay: 1550ms;
+}
+
+
+
+@media (max-width:1200px) {
+    main {
+    flex-direction: column;
+    height: 150vh;
+}
+}
+
+
+</style>
+<body>
+
+    <main>
+
+        <div class="box-2" id="box-2">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        
+        </div>
+        
+        <div class="box-1" id="box-1">
+        
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        
+        </div>
+        
+        <div class="box-3" id="box-3">
+        
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        
+        </div>
+        
+
+    </main>
+    
+</body>
+</html>
